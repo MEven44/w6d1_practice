@@ -42,7 +42,16 @@ function validAnagrams(s, t) {
 }
 
 function reverseBaseSort(arr) {
-  // Your code here
+  return arr.sort((a,b)=>{
+   let baseA = Math.floor(Math.log10(a))
+   let baseB = Math.floor(Math.log10(b))
+    if (baseA === 2 && baseB ===2) return a - b
+    if (baseA === 1 && baseB === 1) return a - b
+    if (baseA === 0 && baseB === 0) return a - b
+     
+    return  b - a
+  })
+ 
 }
 
 
@@ -50,7 +59,19 @@ function reverseBaseSort(arr) {
 
 function frequencySort(arr) {
 
-}
+  let obj = {}
+  for (let ele of arr) {
+    !obj[ele] ? obj[ele] = 1: obj[ele]++;
+  }
+  arr.sort((a,b)=> {
+    if (obj[a] === obj[b]) return b - a
+    else return obj[a] - obj[b]
+  })
+    return arr
+
+  }
+
+
 
 module.exports = [
   oddEvenSort,
