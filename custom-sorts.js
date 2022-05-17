@@ -10,8 +10,8 @@ function oddEvenSort(arr) {
   
   let result = users.sort ((a,b)=> {
     if (a.age % 2 === 1 && b.age % 2 ===0) return 1
-    if (b.age % 2 === 1 && a % 2 ===0) return -1
-    return a - b
+    if (b.age % 2 === 1 && a.age % 2 ===0) return -1
+    return a.age - b.age
   })
 
   return result
