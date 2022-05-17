@@ -8,10 +8,10 @@ function ageSort(users) {   //it's like to sey users.a(represents the index of t
 
 function oddEvenSort(arr) {
   
-  let result = users.sort ((a,b)=> {
-    if (a.age % 2 === 1 && b.age % 2 ===0) return 1
-    if (b.age % 2 === 1 && a.age % 2 ===0) return -1
-    return a.age - b.age
+  let result = arr.sort ((a,b)=> {
+    if (a % 2 === 1 && b % 2 ===0){ return -1}
+    if (b % 2 === 1 && a % 2 ===0){ return 1}
+    return a - b
   })
 
   return result
